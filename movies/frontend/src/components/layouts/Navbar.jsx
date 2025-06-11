@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from '../ui/menubar';
+import React from 'react';
+import { Menubar, MenubarMenu, MenubarTrigger } from '../ui/menubar';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/context/AuthContext';
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
-    const checkLogin = () => {
-      const token = localStorage.getItem('accessToken');
-      setIsLoggedIn(!!token);
-    };
-    checkLogin();
-  }, []);
+  const { isLoggedIn } = useAuth();
+
   return (
     <div className="flex justify-center w-full">
       <div className="container">
