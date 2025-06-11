@@ -60,7 +60,10 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <Button type="submit" className="bg-emerald-500/90 text-white">
+            <Button
+              type="submit"
+              className="bg-emerald-500/90 hover:bg-emerald-200 hover:transition duration-300 hover:cursor-pointer hover:text-black"
+            >
               Login
             </Button>
           </form>
