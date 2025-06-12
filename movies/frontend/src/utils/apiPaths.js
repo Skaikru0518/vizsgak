@@ -3,4 +3,7 @@ export const API_PATH = {
   login: '/login',
   register: '/register',
   getMovies: '/movies',
+  addFavourite: '/favourites',
+  getFavourite: '/favourites',
+  deleteFavourite: '/favourites',
 };

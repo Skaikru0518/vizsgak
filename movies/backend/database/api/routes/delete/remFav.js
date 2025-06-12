@@ -2,7 +2,7 @@ import createDBPool from '../../../db.js';
 import jwt from 'jsonwebtoken';
 
 export const removeFavourite = async (req, res) => {
-  const { username } = req.body;
+  const { username } = req.query;
   const movieId = req.params.id;
   const authHeaders = req.headers['authorization'];
   const token = authHeaders && authHeaders.split(' ')[1]; //bearer: token

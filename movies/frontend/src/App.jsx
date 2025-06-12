@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layouts/Navbar';
 import Dashboard from './components/pages/Dashboard';
 import Login from './components/layouts/Login';
 import Register from './components/layouts/Register';
-import Favourites from './components/layouts/Favourites';
+import Favourites from './components/pages/Favourites';
 import Logout from './components/layouts/Logout';
 import { Toaster } from 'sonner';
 import { AuthProvider } from './context/AuthContext';

@@ -2,7 +2,7 @@ import createDBPool from '../../../db.js';
 import jwt from 'jsonwebtoken';
 
 export const getFavourites = async (req, res) => {
-  const { username } = req.body;
+  const { username } = req.query;
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
@@ -29,17 +29,21 @@ export const getFavourites = async (req, res) => {
     );
 
     const selectedUserId = userId[0].id;
+
     const [favs] = await pool.query(
-      'SELECT * FROM favourites WHERE user_id = ?',
+      `
+      SELECT movies.*
+      FROM favourites
+      INNER JOIN movies ON favourites.movie_id = movies.id
+      WHERE favourites.user_id = ?
+      `,
       [selectedUserId],
     );
     if (favs.length === 0) {
       return res.status(200).json({ message: 'No favourites' });
-    } else {
-      var favMovies = favs;
     }
 
-    return res.status(200).json({ favMovies });
+    return res.status(200).json(favs);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
