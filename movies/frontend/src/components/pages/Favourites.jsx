@@ -11,12 +11,10 @@ import {
 } from '../ui/card';
 import { Button } from '../ui/button';
 import { toast } from 'sonner';
-import { useNavigate } from 'react-router-dom';
 
 const Favourites = () => {
   const { isLoggedIn } = useAuth();
   const [favourites, setFavourites] = useState([]);
-  const navigate = useNavigate();
   useEffect(() => {
     const getFavourites = async () => {
       const username = localStorage.getItem('userName');
