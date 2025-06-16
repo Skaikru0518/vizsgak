@@ -5,12 +5,11 @@ import path from 'path';
 
 const __dirname = path.resolve();
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      '@/': `${path.resolve(__dirname, './src')}`,
+      '@': path.resolve(__dirname, './src'),
     },
   },
 });
