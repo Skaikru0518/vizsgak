@@ -20,9 +20,9 @@ const Login = () => {
         username: username,
         password: password,
       };
-      console.log(payload);
+      //console.log(payload);
       const response = await axiosInstance.post(API_PATH.login, payload);
-      console.log(response.data);
+      //console.log(response.data);
       toast.success('done');
       navigate('/dashboard');
       login(response.data.token, response.data.username);

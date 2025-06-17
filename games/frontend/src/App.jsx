@@ -7,6 +7,7 @@ import Login from './components/Pages/Login';
 import Register from './components/Pages/Register';
 import Navbar from './components/layouts/Navbar';
 import Games from './components/Pages/Games';
+import Logout from './components/layouts/Logout';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </Router>
       <Toaster richColors="true" closeButton="true" />

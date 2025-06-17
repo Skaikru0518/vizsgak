@@ -9,6 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [userName, setUserName] = useState(
     localStorage.getItem('userName') || '',
   );
+  const [token, setToken] = useState(localStorage.getItem('accessToken') || '');
 
   useEffect(() => {
     const handleStorage = () => {
@@ -24,6 +25,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('userName', username);
     setIsLoggedIn(true);
     setUserName(username);
+    setToken(token);
   };
 
   const logout = () => {
@@ -31,9 +33,10 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('userName');
     setIsLoggedIn(false);
     setUserName('');
+    setToken('');
   };
 
-  const value = { isLoggedIn, userName, login, logout };
+  const value = { isLoggedIn, userName, login, logout, token };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

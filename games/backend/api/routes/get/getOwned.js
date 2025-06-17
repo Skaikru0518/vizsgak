@@ -6,7 +6,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const getOwnedGames = async (req, res) => {
-  const { token } = req.body;
+  const authHeaders = req.headers['authorization'];
+  const token = authHeaders && authHeaders.split(' ')[1];
 
   if (!token) {
     return res.status(401).json({ error: 'Token is required' });
