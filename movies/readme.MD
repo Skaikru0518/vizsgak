@@ -1,5 +1,30 @@
 # Joe's Movie Database
 
+---
+
+# Movie Management App
+
+A full-stack application to manage a list of movies. You can add, edit, delete, and search for movies.
+
+## Features
+
+- Add new movies
+- Edit existing movies
+- Delete movies
+- List all movies
+
+---
+
+## Technologies
+
+- React
+- Node.js
+- Express
+- MySQL
+
+---
+
+
 ## How to Use
 
 ### Backend
