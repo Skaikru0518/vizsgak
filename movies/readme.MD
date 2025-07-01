@@ -24,6 +24,13 @@ A full-stack application to manage a list of movies. You can add, edit, delete, 
 
 ---
 
+## Screenshots
+
+![screenshot1](https://github.com/Skaikru0518/vizsgak/blob/main/movies/frontend/screenshots/1.png)
+![screenshot1](https://github.com/Skaikru0518/vizsgak/blob/main/movies/frontend/screenshots/2.png)
+![screenshot1](https://github.com/Skaikru0518/vizsgak/blob/main/movies/frontend/screenshots/3.png)
+
+---
 
 ## How to Use
 
