@@ -1,7 +1,7 @@
 import { pool } from '../../config/db.ts';
 import { Request, Response } from 'express';
 
-export const testRoute = async (req: Request, res: Response) => {
+export const getGames = async (req: Request, res: Response) => {
   try {
     const [games] = await pool.query('SELECT * FROM games');
     res.status(200).json(games);

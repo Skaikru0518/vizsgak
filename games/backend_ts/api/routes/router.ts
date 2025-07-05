@@ -1,8 +1,9 @@
 import express from 'express';
-import { testRoute } from './get';
+import { getGames, getUsers } from './get';
 
 const router = express.Router();
 
-router.get('/test', testRoute);
+router.get('/test', getGames);
+router.get('/users', getUsers);
 
 export default router;
